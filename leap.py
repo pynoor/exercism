@@ -5,9 +5,6 @@ def leap (year):
              print (str(year) + " is  a leap year.")  
     else :
         print (str(year) + " is not a leap year.")
-    return
-
-leap (1992)
 
 
 
