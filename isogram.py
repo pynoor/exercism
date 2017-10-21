@@ -4,7 +4,8 @@ def is_isogram(word = " "):
         if word.count(str(letter)) == 1:
             x = x+1
             if len(word) == x :
-                return (word + " is an isogram.")
+                print(word + " is an isogram.")
+                return True
             
         else :
             print(word + " is not an isogram.")
