@@ -10,3 +10,10 @@ def distance(strand_a, strand_b):
             return (count)
     else :
         return (ValueError)
+    
+# py.test returns 
+# def test_disallow_second_strand_longer(self):
+#       with self.assertRaises(ValueError):
+#E           AssertionError: ValueError not raised
+
+        
