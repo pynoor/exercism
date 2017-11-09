@@ -1,18 +1,23 @@
 
 import re
+import string
+
 def word_count(phrase):
     
-    words = phrase.split()
+    phrase = phrase.lower()
+    
+    def extract_words(s):
+        return[re.sub('^[{0}]+|[{0}]+$'.format(string.punctuation), '', w) for w in phrase.split()]
+        
+    words = extract_words(phrase)
+    print(words)
     frequencies = []
     new = dict()
     
     for x in words :   
         frequencies.append(words.count(x))  
-        regex = re.compile('[^a-zA-Z]')
-        regex = regex.sub('', str(x)) 
-        if str(regex) == "" :
+        if str(x) == "" :
             continue
-        new[regex] = frequencies[words.index(x)]
+        new[x] = frequencies[words.index(x)]
         
     return (new)
-
